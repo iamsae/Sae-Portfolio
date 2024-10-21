@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Segoe UI Variable Display';
+    src: url(/fonts/SegUIVar.ttf);
+}
+
+:root {
+    --color1: #2f3541;
+    --color2: #4c6370;
+    --color3: #80b6c6;
+    --color4: #87bfcf;
+    --color5: #d8dee9;
+    --transitions: 0.24s cubic-bezier(.77, 0, .18, 1);
+    --first-font: sans-serif;
+    /*change this into Segoe UI Variable Display*/
+}
+
+body {
+    font-family: var(--first-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: scroll;
+}
+
+/* Scroll behaviour */
+
+main {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+/* Add a selection background color to all the texts here !*/
+.section-1 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color1);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    scroll-snap-align: center;
+
+}
+
+
+
+.wave1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* --------------------------------------------------- */
+.section-2 {
+    height: 100vh;
+    background-color: var(--color5);
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.section-3 {
+    height: 60vh;
+    background-color: var(--color5);
+    scroll-snap-align: end;
+    position: relative;
+}
+
+.about-me {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.skills {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+.contact {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* ---------------------- */
+.social-icons {
+    /* margin: 20px 400px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: inherit;
+}
+
+.social-icons>a {
+    margin: 5vh 20px;
+}
+
+.icons {
+    height: 30px;
+    fill: var(--color1);
+    transition: var(--transitions);
+}
+
+.icons:hover {
+    fill: var(--color3);
+    transform: scale(1.1);
+}
+
+
+/* ----------- */
+.wave-right,
+.wave-left {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    height: 70vh;
+}
+
+.wave-left {
+    left: 0;
+}
+
+
+
+.section-3 p {
+    bottom: 0;
+}
+
+.line {
+    width: 5%;
+    border: #2f3541 solid 5px;
+    border-radius: 20px;
+    
+}
