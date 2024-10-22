@@ -1,0 +1,38 @@
+.nav-holder {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+ justify-content: center;
+ z-index: 999;
+
+}
+.navbar { backdrop-filter: blur(10px);
+   margin-top: 2%;
+    top: 0;
+    width: 80%;
+    background-color: #0000002c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 60px 60px;
+    transition: top 0.3s;
+  box-shadow: 0px 0px 20px #25353a2a;
+  }
+  .navbar .logo {
+    font-size: 1.5em;
+  }
+  .navbar .menu {
+    display: flex;
+  }
+  .navbar .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 60px;
+    transition: background-color 0.3s;
+  }
+  .navbar .menu a:hover {
+    background-color: #575757;
+  }
