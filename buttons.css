@@ -16,7 +16,7 @@
     background-color: var(--color4);
     border-radius: 1.875rem .625rem;
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px 0 #3B4252;
+    box-shadow: 0px 0px 20px 0 #d8dee91c;
 }
 
 .btn-1:hover:active {

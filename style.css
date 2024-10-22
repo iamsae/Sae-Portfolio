@@ -18,15 +18,15 @@
     --color4: #87bfcf;
     --color5: #d8dee9;
     --transitions: 0.24s cubic-bezier(.77, 0, .18, 1);
-    --first-font: sans-serif;
+    --first-font: Segoe, sans-serif;
     /*change this into Segoe UI Variable Display*/
 }
 
 body {
     font-family: var(--first-font);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-y: scroll; overflow: hidden;
+    -moz-osx-font-smoothing: grayscale; 
+    
 }
 
 /* Scroll behaviour */
@@ -34,7 +34,7 @@ body {
 main {
     scroll-snap-type: y mandatory;
     height: 100vh;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 /* Add a selection background color to all the texts here !*/
@@ -46,7 +46,6 @@ main {
     flex-direction: column;
     background-color: var(--color1);
     position: relative;
-    overflow: hidden;
     z-index: 0;
     scroll-snap-align: center;
 
@@ -164,3 +163,28 @@ main {
     border-radius: 20px;
     
 }
+
+
+
+
+
+.Cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    transform-origin: center center;
+    mix-blend-mode: difference;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    filter: url("#goo");
+    span {
+        position: absolute;
+        display: block;
+        width: 26px;
+        height: 26px;
+        border-radius: 20px;
+        background-color: white;
+        transform-origin: center center;
+        transform: translate(-50%, -50%)}}
